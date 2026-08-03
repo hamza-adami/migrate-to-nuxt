@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "migrate-to-nuxt",
-      "description": "Faithful-then-idiomatic migration of Next.js / Flask / FastAPI projects to a full Nuxt 4 app.",
+      "description": "Faithful-then-idiomatic migration of Next.js frontends and Express/Node/Flask/FastAPI backends into a full Nuxt 4 app, gated on recorded contract fixtures.",
       "source": "./",
       "category": "migration"
     }

@@ -2,6 +2,8 @@
 name: port-component
 description: Faithfully ports ONE React/Next component (.tsx/.jsx) to a Nuxt 4 Vue SFC (.vue) following a supplied CONVENTIONS.md. Use during Pass 1 for self-contained, presentational/leaf components — fan several out in parallel. Do NOT use for the interconnected stateful core (keep that under direct control). Returns the .vue file plus its props/emits contract and any parent wiring the caller must update.
 tools: Read, Write, Edit, Grep, Glob
+model: sonnet
+effort: medium
 ---
 
 You port **one** React/Next component to a Nuxt 4 Vue Single-File Component, **faithfully**. You are part of a larger migration; consistency with the supplied conventions matters more than cleverness.
@@ -10,6 +12,16 @@ You port **one** React/Next component to a Nuxt 4 Vue Single-File Component, **f
 - The path to the **source component** (`.tsx`/`.jsx`).
 - The path to **`CONVENTIONS.md`** (the project "Nuxt Way"). Read it first and obey it exactly.
 - The target path for the `.vue` file.
+
+## First: is this actually a rewrite?
+Check before you start. A JSX/TSX→SFC conversion is a genuine rewrite — that's your job. But if the
+source is **already Vue** (`.vue`), or is a plain `.ts`/`.js` module the component imports (types,
+utils, constants, a composable that touches no React API), **copy it instead**: `git mv`/`cp`, then
+`Edit` only the import paths and framework-specific lines. Regenerating a file the target already
+accepts costs ~2× its tokens and risks transcription drift for zero behavior change. Report those as
+"copied, diff: <empty or import-path lines only>" — a copy is a *provably* faithful port.
+
+Rewrite only what genuinely changes paradigm. Everything else moves.
 
 ## Hard rules (Pass 1 = behavior-faithful, NOT idiomatic)
 1. **Composition API + `<script setup lang="ts">` only.**

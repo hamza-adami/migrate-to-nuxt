@@ -10,6 +10,8 @@ ls vercel.json fly.toml Procfile nixpacks.toml 2>/dev/null
 ```
 Record host, registry, env var names, and which services exist in `NUXT_MIGRATION.md`.
 
+**Runtime target:** default Node. For **Bun** (`nitro.preset: 'bun'`, run with `bun run ./.output/server/index.mjs`) see `references/bun.md` — it is a separate pass after parity, with its own empirical gate, and it's three independent decisions (package manager / prod runtime / dev runtime) that must not be conflated. Verify the preset name against your installed Nitro major.
+
 ## Two topologies
 
 ### A. Full Nuxt (single service) — backend was thin CRUD, ported to Nitro
