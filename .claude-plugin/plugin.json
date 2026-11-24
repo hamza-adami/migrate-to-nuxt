@@ -2,6 +2,7 @@
   "name": "migrate-to-nuxt",
   "description": "Faithful-then-idiomatic migration of Next.js (React) frontends and Express/Node/Flask/FastAPI backends into a full Nuxt 4 app. Strangler-fig backend ports gated on recorded contract fixtures, plan files for multi-session work, three entry modes (including backend-only when the frontend is already Nuxt). Orchestrates the nuxt/vue/shadcn-vue/vueuse/pnpm skills with confirmation gates and real-world pitfall guidance.",
   "version": "0.2.0",
+  "license": "MIT",
   "author": {
     "name": "Hamza Lamrabet",
     "url": "https://adami.ai"

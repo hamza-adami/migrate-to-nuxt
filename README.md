@@ -71,3 +71,7 @@ or just ask: *"migrate this Next.js app to Nuxt 4"* / *"move our Express backend
 - **Delegate tooling** — exact setup commands come from the live skills; this plugin owns workflow + the un-guessable gotchas.
 
 The pitfalls are drawn from real production Next.js → Nuxt 4 migrations. The four that cost the most time: auto-import shadowing (`useStorage`/`useState`), the `runtimeConfig` build-time / `NUXT_` env trap, HttpOnly auth belonging in `server/middleware`, and the dropped-`next/font` serif fallback.
+
+## License
+
+MIT, see [LICENSE](LICENSE). Provided as is, without warranty of any kind.
